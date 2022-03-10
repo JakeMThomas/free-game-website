@@ -1,14 +1,18 @@
 import React, { ReactElement } from 'react'
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import Home from 'components/Home'
+import GlobalStyles from 'GlobalStyles'
 
 const App = (): ReactElement => {
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Home />}></Route>
-			</Routes>
-		</BrowserRouter>
+		<>
+			<GlobalStyles />
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />}></Route>
+				</Routes>
+			</BrowserRouter>
+		</>
 	)
 }
 
