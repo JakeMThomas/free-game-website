@@ -6,13 +6,12 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-cli serve",
-    "start": "serve -s build",
     "build": "webpack",
     "type:check": "tsc",
     "lint:ts": "eslint './src/**/*.{tsx,ts}'",
     "lint:css": "stylelint './src/**/*.styles.ts'",
     "lint": "yarn lint:ts && yarn lint:css",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "yarn run build"
   },
   "husky": {
     "hooks": {
