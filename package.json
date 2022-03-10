@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-cli serve",
+    "start": "serve -s build",
     "build": "webpack",
     "type:check": "tsc",
     "lint:ts": "eslint './src/**/*.{tsx,ts}'",
