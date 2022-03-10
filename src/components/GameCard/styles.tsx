@@ -35,6 +35,11 @@ export const Details = styled.div`
 export const Description = styled.p`
 	font-size: 16px;
 	color: ${seconaryTextColor};
+
+	@media (min-width: ${breakpoints.tablet}) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 `
 
 export const Genre = styled.p`
