@@ -1,11 +1,14 @@
 #  Free Game Website
 A website that's dedicated to finding free games 
 
-# Installation
+## Installation
 ```npm install```
 
-# Dev Mode
+## Dev Mode
 ```yarn dev```
 
-# Build
+## Build
 ```yarn build```
+
+## Demo Site
+https://gracious-swirles-e20426.netlify.app/
