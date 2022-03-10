@@ -2,7 +2,7 @@
   "name": "free-game",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Minh Nguyen",
+  "author": "Jacob Thomas",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-cli serve",
@@ -10,7 +10,8 @@
     "type:check": "tsc",
     "lint:ts": "eslint './src/**/*.{tsx,ts}'",
     "lint:css": "stylelint './src/**/*.styles.ts'",
-    "lint": "yarn lint:ts && yarn lint:css"
+    "lint": "yarn lint:ts && yarn lint:css",
+    "heroku-postbuild": "npm run build"
   },
   "husky": {
     "hooks": {
