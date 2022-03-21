@@ -2,7 +2,6 @@ import React, { ReactElement, useEffect, useState } from 'react'
 import GameListRender from './GameList.render'
 import axios from 'axios'
 import { Game } from 'types'
-import { API_HOST, API_KEY } from './constants'
 
 const GameList = (): ReactElement => {
 	const [games, setGames] = useState<Game[]>([])
@@ -11,10 +10,10 @@ const GameList = (): ReactElement => {
 	useEffect(() => {
 		axios
 			.get('/games', {
-				baseURL: `https://${API_HOST}/api`,
+				baseURL: `https://${process.env.REACT_APP_API_HOST}/api`,
 				headers: {
-					'x-rapidapi-host': API_HOST,
-					'x-rapidapi-key': API_KEY,
+					'x-rapidapi-host': process.env.REACT_APP_API_HOST,
+					'x-rapidapi-key': process.env.REACT_APP_API_KEY,
 				},
 				params: {
 					platform: 'browser',
