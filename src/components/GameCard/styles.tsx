@@ -53,7 +53,7 @@ export const Genre = styled.p`
 	float: right;
 `
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.a`
 	display: inline-block;
 	width: 100%;
 	background-color: ${secondaryColor};

@@ -17,7 +17,15 @@ interface Props {
 }
 
 const GameCard = ({ content }: Props): ReactElement => {
-	const { id, title, thumbnail, short_description, genre, platform } = content
+	const {
+		id,
+		title,
+		thumbnail,
+		short_description,
+		genre,
+		platform,
+		freetogame_profile_url,
+	} = content
 	const icons = platform.split(',').map((p) => {
 		let icon = null
 		switch (p.trim()) {
@@ -39,7 +47,7 @@ const GameCard = ({ content }: Props): ReactElement => {
 	const link = `/game/${id}`
 
 	return (
-		<StyledLink to={link}>
+		<StyledLink href={freetogame_profile_url}>
 			<Img alt={`${title} logo`} src={thumbnail} />
 			<Details>
 				<Title>{title}</Title>
